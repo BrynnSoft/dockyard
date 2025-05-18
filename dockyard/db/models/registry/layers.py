@@ -1,4 +1,4 @@
-from sqlalchemy import Uuid, String, ForeignKey, UniqueConstraint, LargeBinary, JSON, SmallInteger
+from sqlalchemy import Uuid, String, ForeignKey, LargeBinary, JSON, SmallInteger, BigInteger
 from sqlalchemy.orm import Mapped, mapped_column
 from uuid import UUID
 
@@ -12,6 +12,7 @@ class RegistryLayer(Base):
     digest_sha256: Mapped[bytes] = mapped_column(LargeBinary, nullable=False, index=True)
 
     position: Mapped[int] = mapped_column(SmallInteger, nullable=False)
+    size: Mapped[int] = mapped_column(BigInteger, nullable=False)
 
     storage_provider: Mapped[str] = mapped_column(String(255), nullable=False)
     storage_info: Mapped[dict] = mapped_column(JSON, nullable=False)
