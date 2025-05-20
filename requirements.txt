@@ -1,6 +1,6 @@
 alembic==1.15.2
 argon2-cffi==23.1.0
-flask==3.1.0
+flask==3.1.1
 flask-openapi3[swagger,redoc,rapidoc,rapipdf,scalar,elements]==4.1.0 # TODO remove unneeded deps
 httpx==0.28.1
 sqlalchemy[postgresql-psycopg]==2.0.40
